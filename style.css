@@ -1,0 +1,9 @@
+html {
+  height: 100%;
+  /*I haven't decided yet which gradient style is better*/
+  /*background: linear-gradient(to right, #aaa 1%, #fff 50%, #aaa 99%);*/
+  background: radial-gradient(#eee 50%, #aaa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
