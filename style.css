@@ -1,9 +1,76 @@
 html {
   height: 100%;
   /*I haven't decided yet which gradient style is better*/
-  /*background: linear-gradient(to right, #aaa 1%, #fff 50%, #aaa 99%);*/
+  /*background: linear-gradient(to right, #aaa, #fff 50%, #aaa);*/
   background: radial-gradient(#eee 50%, #aaa);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: helvetica;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3, p {
+  margin: 20px;
+  color: #fff;
+}
+
+.main {
+  width: 868px;
+  height: 432px;
+  background: #333;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.left {
+  width: 50px;
+  height: 432px;
+  background: green;
+  flex-grow: : 1;
+}
+
+.gallery {
+  position: relative;
+  width: 768px;
+  height: 432px;
+  background: blue;
+  flex-grow: 2;
+}
+
+.large {
+  width: 768px;
+  height: 432px;
+}
+
+.right {
+  width: 50px;
+  height: 432px;
+  background: yellow;
+  flex-grow: : 1;
+}
+
+.description {
+  position: absolute;
+  bottom: 0;
+  height: 120px;
+  width: 768px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.thumbnail {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.small {
+  width: 72px;
+  height: 72px;
+  margin: auto 5px;
+  background: red;
+  list-style: none;
 }
