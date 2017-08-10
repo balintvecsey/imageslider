@@ -67,10 +67,16 @@ h3, p {
   justify-content: center;
 }
 
-.small {
+.list {
   width: 72px;
   height: 72px;
   margin: auto 5px;
   background: red;
   list-style: none;
+}
+
+.small {
+  width: 72px;
+  height: 72px;
+  object-fit: fill;
 }
