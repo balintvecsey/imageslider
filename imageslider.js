@@ -1,6 +1,6 @@
 'use strict';
 
-var images = [
+const images = [
   {title: 'Purrr, purrr', text: 'Refuse to drink water except out of someone\'s glass steal the warm chair right after you get up hopped up on catnip, and licks paws, and make meme, make cute face, meowwww.', url: 'http://placekitten.com/768/432'},
   {title: 'Random', text: 'What, what', url: 'http://placeimg.com/640/360'},
   {title: 'Murray', text: 'Uhuh ... yih!', url: 'http://fillmurray.com/640/360'},
@@ -10,17 +10,49 @@ var images = [
   {title: 'Bacon', text: 'check it out vizzle', url: 'http://baconmockup.com/640/360'},
 ];
 
-var thumbnail = document.querySelectorAll('.small');
-var largeImage = document.querySelector('.large');
-var descriptionTitle = document.querySelector('h3');
-var descriptionText = document.querySelector('p');
+let imageOrder = 0;
+let thumbnail = document.querySelectorAll('.small');
+let largeImage = document.querySelector('.large');
+let descriptionTitle = document.querySelector('h2');
+let descriptionText = document.querySelector('p');
+let leftButton = document.querySelector('.left');
+let rightButton = document.querySelector('.right');
 
 for (let i = 0; i < thumbnail.length; i++) {
   thumbnail[i].setAttribute('src', images[i].url);
+  thumbnail[i].addEventListener('click', function() {
+    changeSmallToLarge(i);
+  })
 }
 
-largeImage.setAttribute('src', thumbnail[0].src);
-descriptionTitle.innerHTML = images[0].title;
-descriptionText.innerHTML = images[0].text;
-console.log(descriptionTitle);
-console.log(descriptionText);
+largeImage.src = images[imageOrder].url;
+descriptionTitle.innerHTML = images[imageOrder].title;
+descriptionText.innerHTML = images[imageOrder].text;
+
+leftButton.addEventListener('click', function(){
+  changePic(-1);
+});
+rightButton.addEventListener('click', function(){
+  changePic(1);
+});
+
+function changePic(direction) {
+  imageOrder += direction;
+  if(imageOrder === images.length) {
+    imageOrder = 0;
+  } else if(imageOrder < 0) {
+    imageOrder = images.length - 1;
+  }
+  largeImage.src = images[imageOrder].url;
+  descriptionTitle.innerHTML = images[imageOrder].title;
+  descriptionText.innerHTML = images[imageOrder].text;
+  console.log(imageOrder);
+};
+
+function changeSmallToLarge(num) {
+  imageOrder = num;
+  console.log(num);
+  largeImage.src = images[imageOrder].url;
+  descriptionTitle.innerHTML = images[imageOrder].title;
+  descriptionText.innerHTML = images[imageOrder].text;
+};
