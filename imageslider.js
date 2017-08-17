@@ -1,13 +1,13 @@
 'use strict';
 
 const images = [
-  {title: 'Purrr, purrr', text: 'Refuse to drink water except out of someone\'s glass steal the warm chair right after you get up hopped up on catnip, and licks paws, and make meme, make cute face, meowwww.', url: 'http://placekitten.com/768/432'},
-  {title: 'Random', text: 'What, what', url: 'http://placeimg.com/640/360'},
-  {title: 'Murray', text: 'Uhuh ... yih!', url: 'http://fillmurray.com/640/360'},
-  {title: 'Crazy Cage', text: 'check out this dolizzle shizznit amizzle', url: 'http://placecage.com/c/640/360'},
-  {title: 'Normal Cage', text: 'crazy adipiscing dope', url: 'http://placecage.com/640/360'},
-  {title: 'Bear', text: 'Nullizzle sapizzle velit', url: 'http://placebear.com/640/360'},
-  {title: 'Bacon', text: 'check it out vizzle', url: 'http://baconmockup.com/640/360'},
+  {title: 'Purrr, purrr', text: 'Refuse to drink water except out of someone\'s glass steal the warm chair right after you get up hopped up on catnip, and licks paws, and make meme, make cute face, meowwww.', url: 'https://placekitten.com/768/432'},
+  {title: 'Random', text: 'What, what', url: 'https://placeimg.com/640/360'},
+  {title: 'Murray', text: 'Uhuh ... yih!', url: 'https://fillmurray.com/640/360'},
+  {title: 'Crazy Cage', text: 'check out this dolizzle shizznit amizzle', url: 'https://placecage.com/c/640/360'},
+  {title: 'Normal Cage', text: 'crazy adipiscing dope', url: 'https://placecage.com/640/360'},
+  {title: 'Bear', text: 'Nullizzle sapizzle velit', url: 'https://placebear.com/640/360'},
+  {title: 'Bacon', text: 'check it out vizzle', url: 'https://baconmockup.com/640/360'},
 ];
 
 let imageOrder = 0;
