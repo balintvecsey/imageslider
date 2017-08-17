@@ -7,8 +7,6 @@
 
 html {
   height: 100%;
-  /*I haven't decided yet which gradient style is better*/
-  /*background: linear-gradient(to right, #333 1%, #346135 50%, #333 99%);*/
   background: radial-gradient(#007849 85%, #262228);
   display: flex;
   align-items: center;
@@ -35,6 +33,7 @@ h2, p {
   background: #333;
   display: flex;
   flex-flow: row nowrap;
+  box-shadow: 2px 2px 4px 2px rgba(40, 40, 40, 0.6);
 }
 
 .button {
@@ -45,29 +44,24 @@ h2, p {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 2px 4px 2px rgba(40, 40, 40, 0.6);
-  background: linear-gradient(#ffdb4d, #ffce00);
+  background: url('assets/arrow.svg') no-repeat center, linear-gradient(#ffdb4d, #ffce00);
+}
+
+.button:hover {
+  background: url('assets/arrow.svg') no-repeat center, linear-gradient(#ffce00, #ffdb4d);
 }
 
 .button:active {
-  background: linear-gradient(#ffce00, #ffdb4d);
+  background: url('assets/arrow-active.svg') no-repeat center, linear-gradient(#ffce00, #ffdb4d);
   box-shadow: inset 2px 2px 4px 2px rgba(40, 40, 40, 0.6);
 }
 
-.arrow {
-  content: url('assets/arrow.svg');
-}
-
-.arrow:active {
-  content: url('assets/arrow-active.svg') ;
-}
-
-.left {
-
-}
-
-.other {
+.right {
   transform: scaleX(-1);
+}
+
+.right:active {
+  box-shadow: inset -2px 2px 4px 2px rgba(40, 40, 40, 0.6);
 }
 
 .gallery {
@@ -75,13 +69,11 @@ h2, p {
   width: 768px;
   height: 432px;
   background: blue;
-  /*box-shadow: 2px 2px 4px -2px rgba(40, 40, 40, 0.6);*/
 }
 
 .large {
   width: 768px;
   height: 432px;
-
 }
 
 .description {
@@ -110,8 +102,8 @@ h2, p {
   width: 72px;
   height: 72px;
   object-fit: cover;
+  cursor: pointer;
   box-shadow: 5px 5px 4px 2px rgba(40, 40, 40, 0.6);
-  /*outline: 5px solid #ffdb4d;*/
   outline: 5px solid #aaa;
 }
 

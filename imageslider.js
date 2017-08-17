@@ -18,16 +18,14 @@ let descriptionText = document.querySelector('p');
 let leftButton = document.querySelector('.left');
 let rightButton = document.querySelector('.right');
 
+setLargePic();
+
 for (let i = 0; i < thumbnail.length; i++) {
-  thumbnail[i].setAttribute('src', images[i].url);
+  thumbnail[i].src = images[i].url;
   thumbnail[i].addEventListener('click', function() {
     changeSmallToLarge(i);
   })
 }
-
-largeImage.src = images[imageOrder].url;
-descriptionTitle.innerHTML = images[imageOrder].title;
-descriptionText.innerHTML = images[imageOrder].text;
 
 leftButton.addEventListener('click', function(){
   changePic(-1);
@@ -36,6 +34,13 @@ rightButton.addEventListener('click', function(){
   changePic(1);
 });
 
+function setLargePic() {
+  largeImage.src = images[imageOrder].url;
+  descriptionTitle.innerHTML = images[imageOrder].title;
+  descriptionText.innerHTML = images[imageOrder].text;
+  console.log(imageOrder);
+};
+
 function changePic(direction) {
   imageOrder += direction;
   if(imageOrder === images.length) {
@@ -43,16 +48,10 @@ function changePic(direction) {
   } else if(imageOrder < 0) {
     imageOrder = images.length - 1;
   }
-  largeImage.src = images[imageOrder].url;
-  descriptionTitle.innerHTML = images[imageOrder].title;
-  descriptionText.innerHTML = images[imageOrder].text;
-  console.log(imageOrder);
+  setLargePic();
 };
 
 function changeSmallToLarge(num) {
   imageOrder = num;
-  console.log(num);
-  largeImage.src = images[imageOrder].url;
-  descriptionTitle.innerHTML = images[imageOrder].title;
-  descriptionText.innerHTML = images[imageOrder].text;
+  setLargePic();
 };
