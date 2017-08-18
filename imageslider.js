@@ -22,6 +22,7 @@ setLargePic();
 
 for (let i = 0; i < thumbnail.length; i++) {
   thumbnail[i].src = images[i].url;
+  thumbnail[i].title = images[i].title;
   thumbnail[i].addEventListener('click', function() {
     changeSmallToLarge(i);
   })
@@ -36,6 +37,7 @@ rightButton.addEventListener('click', function(){
 
 function setLargePic() {
   largeImage.src = images[imageOrder].url;
+  largeImage.title = images[imageOrder].title;
   descriptionTitle.innerHTML = images[imageOrder].title;
   descriptionText.innerHTML = images[imageOrder].text;
   console.log(imageOrder);
