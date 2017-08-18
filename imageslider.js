@@ -40,6 +40,7 @@ function setLargePic() {
   largeImage.title = images[imageOrder].title;
   descriptionTitle.innerHTML = images[imageOrder].title;
   descriptionText.innerHTML = images[imageOrder].text;
+  setActive();
   console.log(imageOrder);
 };
 
@@ -56,4 +57,13 @@ function changePic(direction) {
 function changeSmallToLarge(num) {
   imageOrder = num;
   setLargePic();
+};
+
+function setActive() {
+  for (var i = 0; i < thumbnail.length; i++) {
+    if (thumbnail[i].id === 'active') {
+      thumbnail[i].removeAttribute('id');
+    }
+  }
+  thumbnail[imageOrder].id = 'active';
 };

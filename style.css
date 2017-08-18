@@ -108,9 +108,9 @@ h2, p {
 }
 
 .small:hover {
-  outline: 5px solid #ffce00;
+  outline: 5px solid #ffdb4d;
 }
 
-/*#active {
-  outline: 5px solid #ffdb4d;
-}*/
+#active {
+  outline: 5px solid #ffce00;
+}
