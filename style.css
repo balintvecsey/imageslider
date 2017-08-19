@@ -64,6 +64,10 @@ h2, p {
   box-shadow: inset -2px 2px 4px 2px rgba(40, 40, 40, 0.6);
 }
 
+img {
+  user-select: none;
+}
+
 .gallery {
   position: relative;
   width: 768px;
