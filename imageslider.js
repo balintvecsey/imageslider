@@ -8,6 +8,11 @@ const images = [
   {title: 'Normal Cage', text: 'crazy adipiscing dope', url: 'https://placecage.com/640/360'},
   {title: 'Bear', text: 'Nullizzle sapizzle velit', url: 'https://placebear.com/640/360'},
   {title: 'Bacon', text: 'check it out vizzle', url: 'https://baconmockup.com/640/360'},
+  {title: 'New1', text: 'check it out vizzle1', url: 'https://unsplash.it/640/360'},
+  {title: 'New2', text: 'check it out vizzle2', url: 'https://unsplash.it/g/640/360'},
+  {title: 'New3', text: 'check it out vizzle3', url: 'https://unsplash.it/640/360'},
+  {title: 'New4', text: 'check it out vizzle4', url: 'https://unsplash.it/g/640/360'},
+  {title: 'New5', text: 'check it out vizzle5', url: 'https://unsplash.it/640/360'},
 ];
 
 let imageOrder = 0;
