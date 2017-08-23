@@ -14,6 +14,10 @@ html {
   font-family: helvetica;
 }
 
+body {
+  margin: 0;
+}
+
 h1 {
   text-align: center;
   font-size: 56px;
@@ -28,8 +32,8 @@ h2, p {
 }
 
 .main {
-  width: 868px;
-  height: 432px;
+  width: 996px;
+  height: 504px;
   background: #333;
   display: flex;
   flex-flow: row nowrap;
@@ -65,26 +69,24 @@ h2, p {
 }
 
 img {
-  user-select: none;
+  user-select: none
 }
 
 .gallery {
   position: relative;
-  width: 768px;
-  height: 432px;
   background: blue;
 }
 
 .large {
-  width: 768px;
-  height: 432px;
+  width: 896px;
+  height: 504px;
 }
 
 .description {
   position: absolute;
   bottom: 0;
   height: 120px;
-  width: 768px;
+  width: 100%;
   background: rgba(38, 34, 40, 0.8);
 }
 
