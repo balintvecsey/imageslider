@@ -89,9 +89,9 @@ function changeSmallToLarge(num) {
 
 function setActive() {
   for (let i = 0; i < thumbnail.length; i++) {
-    if (thumbnail[i].id === 'active') {
-      thumbnail[i].removeAttribute('id');
+    if (thumbnail[i].parentElement.id === 'active') {
+      thumbnail[i].parentElement.removeAttribute('id');
     }
   }
-  thumbnail[thumbnailOrder].id = 'active';
+  thumbnail[thumbnailOrder].parentElement.id = 'active';
 };

@@ -6,7 +6,7 @@
 }*/
 
 html {
-  height: 100%;
+  height: 99%;
   background: radial-gradient(#007849 85%, #262228);
   display: flex;
   align-items: center;
@@ -48,15 +48,15 @@ h2, p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('assets/arrow.svg') no-repeat center, linear-gradient(#ffdb4d, #ffce00);
+  background: url('assets/arrow.svg') no-repeat center, linear-gradient(#ffe680, #ffce00);
 }
 
 .button:hover {
-  background: url('assets/arrow.svg') no-repeat center, linear-gradient(#ffce00, #ffdb4d);
+  background: url('assets/arrow.svg') no-repeat center, linear-gradient(#ffce00, #ffe680);
 }
 
 .button:active {
-  background: url('assets/arrow-active.svg') no-repeat center, linear-gradient(#ffce00, #ffdb4d);
+  background: url('assets/arrow-active.svg') no-repeat center, linear-gradient(#ffce00, #ffe680);
   box-shadow: inset 2px 2px 4px 2px rgba(40, 40, 40, 0.6);
 }
 
@@ -97,11 +97,19 @@ img {
 }
 
 .list {
-  width: 72px;
-  height: 72px;
+  width: 82px;
+  height: 82px;
   margin: auto 10px;
-  background: red;
+  background: linear-gradient(#999, #ccc);
+  box-shadow: 0px 5px 4px 2px rgba(40, 40, 40, 0.6);
   list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list:hover {
+  background: linear-gradient(#ccc, #999);
 }
 
 .small {
@@ -109,14 +117,8 @@ img {
   height: 72px;
   object-fit: cover;
   cursor: pointer;
-  box-shadow: 5px 5px 4px 2px rgba(40, 40, 40, 0.6);
-  outline: 5px solid #aaa;
-}
-
-.small:hover {
-  outline: 5px solid #ffdb4d;
 }
 
 #active {
-  outline: 5px solid #ffce00;
+  background: linear-gradient(#ffce00, #ffe680);
 }
