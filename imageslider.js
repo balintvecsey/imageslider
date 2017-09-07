@@ -43,6 +43,17 @@ window.onload = function() {
   };
 };
 
+window.onkeydown = function(e) {
+  switch (e.keyCode) {
+    case 37:
+      changePic(-1);
+      break;
+    case 39:
+      changePic(1);
+      break;
+  }
+}
+
 function setThumbnail() {
   imageOrder = thumbnailOrder + difference;
   if(imageOrder === images.length) {
