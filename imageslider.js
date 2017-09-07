@@ -25,20 +25,22 @@ let descriptionText = document.querySelector('p');
 let leftButton = document.querySelector('.left');
 let rightButton = document.querySelector('.right');
 
-setThumbnail();
-setLargePic();
+window.onload = function() {
+  setThumbnail();
+  setLargePic();
 
-leftButton.addEventListener('click', function(){
-  changePic(-1);
-});
-rightButton.addEventListener('click', function(){
-  changePic(1);
-});
+  leftButton.addEventListener('click', function(){
+    changePic(-1);
+  });
+  rightButton.addEventListener('click', function(){
+    changePic(1);
+  });
 
-for (let i = 0; i < thumbnail.length; i++) {
-  thumbnail[i].addEventListener('click', function() {
-    changeSmallToLarge(i);
-  })
+  for (let i = 0; i < thumbnail.length; i++) {
+    thumbnail[i].addEventListener('click', function() {
+      changeSmallToLarge(i);
+    })
+  };
 };
 
 function setThumbnail() {
