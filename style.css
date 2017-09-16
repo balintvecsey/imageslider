@@ -76,9 +76,14 @@ img {
   position: relative;
 }
 
-.large {
+.picture {
   width: 896px;
   height: 504px;
+}
+
+.large {
+  width: 100%;
+  height: 100%;
 }
 
 .description {
